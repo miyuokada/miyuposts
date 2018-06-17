@@ -25,7 +25,7 @@
                 </div>
 
                 <div class="form-group">
-                    {!! Form::label('password_confirmation', 'メールアドレスの確認') !!}
+                    {!! Form::label('password_confirmation', 'パスワードの確認') !!}
                     {!! Form::password('password_confirmation', ['class' => 'form-control']) !!}
                 </div>
 

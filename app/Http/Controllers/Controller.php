@@ -15,9 +15,14 @@ class Controller extends BaseController
 
     public function counts($user) {
         $count_miyuposts = $user->miyuposts()->count();
+        $count_followings = $user->followings()->count();
+        $count_followers = $user->followers()->count();
 
         return [
             'count_miyuposts' => $count_miyuposts,
+            'count_followings' => $count_followings,
+            'count_followers' => $count_followers,
         ];
     }
 }
+

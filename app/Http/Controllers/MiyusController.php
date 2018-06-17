@@ -6,23 +6,22 @@ use Illuminate\Http\Request;
 
 class MiyusController extends Controller
 {
-    public function index()
+   
+        public function index()
     {
         $data = [];
         if (\Auth::check()) {
             $user = \Auth::user();
-            $miyuposts = $user->miyuposts()->orderBy('created_at', 'desc')->paginate(10);
+            $miyuposts = $user->feed_miyuposts()->orderBy('created_at', 'desc')->paginate(10);
 
             $data = [
                 'user' => $user,
                 'miyuposts' => $miyuposts,
             ];
-            $data += $this->counts($user);
-            return view('users.show', $data);
-        }else {
-            return view('welcome');
         }
+        return view('welcome', $data);
     }
+    
     
       public function store(Request $request)
     {
@@ -47,7 +46,7 @@ class MiyusController extends Controller
 
         return redirect()->back();
     }
+    }
     
-    
-}
+
 

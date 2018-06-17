@@ -17,7 +17,7 @@
     @else
         <div class="center jumbotron">
             <div class="text-center">
-                
+                <h1>Miyupostsにようこそ！！<br>たくさん使ってね♡</h1>
               <h1>Miyupostsにようこそ！！<br>たくさん使ってね♡</h1>
             </div>
         </div>
